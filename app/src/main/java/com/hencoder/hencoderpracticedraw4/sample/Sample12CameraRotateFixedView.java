@@ -51,9 +51,11 @@ public class Sample12CameraRotateFixedView extends View {
 
         camera.save();
         matrix.reset();
+
         camera.rotateX(30);
         camera.getMatrix(matrix);
         camera.restore();
+
         matrix.preTranslate(-center1X, -center1Y);
         matrix.postTranslate(center1X, center1Y);
         canvas.save();
